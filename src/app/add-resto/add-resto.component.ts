@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { CommonService } from '../common.service';
+import { FormControl, FormGroup } from '@angular/forms'
 
 @Component({
   selector: 'app-add-resto',
@@ -7,9 +9,22 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AddRestoComponent implements OnInit {
 
-  constructor() { }
+  addRestorant= new FormGroup({
+    name:new FormControl(''),
+    address:new FormControl(''),
+    phoneNumber:new FormControl(''),
+    emailId:new FormControl('')
+  })
+
+  constructor(private resta:CommonService) { }
 
   ngOnInit(): void {
+  }
+  addresto(){
+    console.log(this.addRestorant.value);
+    this.resta.addhotel(this.addRestorant.value).subscribe((result)=>{
+      console.log("Added",this.resta);
+    });
   }
 
 }

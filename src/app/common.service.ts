@@ -11,4 +11,7 @@ export class CommonService {
   getrestodetails(){
     return this.http.get(this.url);
   }
+  addhotel(data: any){
+    return this.http.post(this.url,data)
+  }
 }
