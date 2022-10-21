@@ -1,0 +1,24 @@
+<div class="container">
+    <h1>Details of Restaurant</h1>
+</div>
+<div class="container">
+    <table class="table table-warning table-striped table-bordered border-light">
+        <thead class="bg-warning" >
+            <th>ID</th>
+            <th>Hotel Name</th>
+            <th>Address</th>
+            <th>Phone Number </th>
+            <th>MailID</th>
+          </thead>
+          <tbody>
+           
+            <tr *ngFor="let hotel of resho">
+              <th>{{hotel.id}}</th>
+              <td>{{hotel.name}}</td>
+              <td>{{hotel.address}}</td>
+              <td>{{hotel.phoneNumber}}</td>
+              <td>{{hotel.emailId}}</td>
+            </tr>
+          </tbody>
+      </table>
+</div>
