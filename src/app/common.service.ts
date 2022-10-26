@@ -14,4 +14,13 @@ export class CommonService {
   addhotel(data: any){
     return this.http.post(this.url,data)
   }
+  delHotel(id:any){
+    return this.http.delete(`${this.url}/${id}`)
+  }
+  getHotelData(id:any){
+    return this.http.get(`${this.url}/${id}`)
+  }
+  updateHotelData(id:any, data:any){
+    return this.http.put(`${this.url}/${id}`,data)
+  }
 }

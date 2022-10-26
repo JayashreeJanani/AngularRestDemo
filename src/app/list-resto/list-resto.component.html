@@ -19,7 +19,7 @@
               <td>{{hotel.address}}</td>
               <td>{{hotel.phoneNumber}}</td>
               <td>{{hotel.emailId}}</td>
-              <td ><i class='fa fa-edit text-warning'></i>&nbsp;<i class='fa fa-trash text-success'></i></td>
+              <td ><a routerLink="/update/{{hotel.id}}"><i class='fa fa-edit text-warning'></i></a>&nbsp;<i class='fa fa-trash text-success' (click)="deleteHotel(hotel.id)"></i></td>
             </tr>
           </tbody>
       </table>
