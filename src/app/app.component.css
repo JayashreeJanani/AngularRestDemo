@@ -2,13 +2,17 @@
 
 
 
+label{
+  text-align:left ;
+  padding: 0%;
+}
 
 
 .header {
-  width: 105%;
+  width: 100%;
   padding-left: 0%;
   margin: 0%;
-  text-align:center;
+  text-align:right;
   background: linear-gradient(60deg, rgba(84,58,183,1) 0%, rgba(0,172,193,1) 100%);
   color:white;
 }
