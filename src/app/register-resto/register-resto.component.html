@@ -1,1 +1,39 @@
-<p>register-resto works!</p>
+
+    <div class="container py-4">
+        <header class="pb-3 mb-4 border-bottom border-danger">
+          <a href="/" class="d-flex align-items-center text-dark text-decoration-none">
+            <i class="fa fa-user-plus text-danger"></i>&nbsp;&nbsp;
+            <span class="fs-4 text-danger">Register Here</span>
+          </a>
+        </header>
+        <div class="card text-center container py-4">
+            <div class="card-body">
+        <form [formGroup]="creatRestorant" (ngSubmit)="creatresto()">
+            <div class="mb-3">
+              <label class="form-label text-dark">Name</label>
+              <input type="text" class="form-control"  formControlName="name" placeholder="Your name here">
+              
+            </div>
+            
+              
+              <div class="mb-3">
+                <label class="form-label text-dark ">Email Id</label>
+                <input type="text" class="form-control" formControlName="emailId" placeholder="Email Id here">
+               
+              </div>
+              <div class="mb-3">
+                <label class="form-label text-dark">Password</label>
+                <input type="password" class="form-control" formControlName="password" placeholder="Password Here">
+                
+              </div>
+              
+            <button type="submit" class="btn btn-warning">Register</button>
+          </form>
+        </div>
+        </div>
+    </div>
+   
+        
+  
+    
+    

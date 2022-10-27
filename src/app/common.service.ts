@@ -7,6 +7,7 @@ import { HttpClient } from '@angular/common/http';
 })
 export class CommonService {
  url='http://localhost:3000/restodetails';
+ regUrl='http://localhost:3000/users'
   constructor( private http:HttpClient) { }
   getrestodetails(){
     return this.http.get(this.url);
@@ -22,5 +23,8 @@ export class CommonService {
   }
   updateHotelData(id:any, data:any){
     return this.http.put(`${this.url}/${id}`,data)
+  }
+  creatHotelDate(data:any){
+    return this.http.post(this.regUrl,data)
   }
 }

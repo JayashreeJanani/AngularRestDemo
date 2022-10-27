@@ -11,8 +11,8 @@
     </div>
     <form [formGroup]="editRestorant" (ngSubmit)="editresto()">
         <div class="mb-3">
-          <label class="form-label">Name</label>
-          <input type="text" class="form-control"  formControlName="name">
+          <label class="form-label text-xl-left">Name</label>
+          <input type="text" class="form-control"  formControlName="name" placeholder="Your name here">
           
         </div>
         <div class="mb-3">
@@ -22,12 +22,12 @@
           </div>
           <div class="mb-3">
             <label class="form-label">phoneNumber</label>
-            <input type="email" class="form-control" formControlName="phoneNumber">
+            <input type="email" class="form-control" formControlName="phoneNumber" placeholder="Your Phone number here">
             
           </div>
           <div class="mb-3">
             <label class="form-label">Email Id</label>
-            <input type="text" class="form-control" formControlName="emailId">
+            <input type="text" class="form-control" formControlName="emailId" placeholder="Mail id here">
            
           </div>
           

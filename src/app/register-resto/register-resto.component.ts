@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { FormControl, FormGroup } from '@angular/forms';
+import { CommonService } from '../common.service';
 
 @Component({
   selector: 'app-register-resto',
@@ -7,8 +9,21 @@ import { Component, OnInit } from '@angular/core';
 })
 export class RegisterRestoComponent implements OnInit {
 
-  constructor() { }
+  alert : boolean= false;
+  creatRestorant= new FormGroup({
+    name:new FormControl(''),
+    password:new FormControl(''),
+    
+    emailId:new FormControl('')
+  })
 
+  constructor(private resta:CommonService) { }
+  creatresto(){
+    this.resta.creatHotelDate(this.creatRestorant.value).subscribe((result)=>{
+      console.log(result,"added");
+
+    })
+  }
   ngOnInit(): void {
   }
 
