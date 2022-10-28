@@ -1,37 +1,43 @@
-<div class="container py-4">
-<header class="pb-3 mb-4 ">
-  <a href="/" class="d-flex align-items-center text-dark text-decoration-none">
-    <i class="fa fa-building text-light"></i>&nbsp;&nbsp;
-    <span class="fs-4 text-light">Add Restaurant here</span>
-  </a>
-</header></div>
 <div *ngIf="alert" class="alert alert-warning alert-dismissible fade show" role="alert">
   <strong>Success !</strong> Your data is successfully saved
   <button (click)="closeAlert" type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
 </div>
+<div class="container col-md-12 cardbg">
+<mat-card class="bg-light card">
+<mat-card-title class="titleCard border-bottom border-primary">
+  <a href="/" class="d-flex align-items-center text-dark text-decoration-none">
+    <i class="fa fa-building text-primary"></i>&nbsp;&nbsp;
+    <span class="fs-4 text-primary">Add Restaurant here</span>
+  </a>
+</mat-card-title>
+
+<mat-card-content>
+
 <form [formGroup]="addRestorant" (ngSubmit)="addresto()">
     <div class="mb-3">
-      <label class="form-label">Name</label>
+      <label class="form-label text-primary">Name</label>
       <input type="text" class="form-control"  formControlName="name" placeholder="Your name here">
       
     </div>
     <div class="mb-3">
-        <label class="form-label">Adress</label>
+        <label class="form-label text-primary">Adress</label>
         <input type="text" class="form-control" formControlName="address" placeholder="Adress here">
         
       </div>
       <div class="mb-3">
-        <label class="form-label">phoneNumber</label>
+        <label class="form-label text-primary">Phone Number</label>
         <input type="email" class="form-control" formControlName="phoneNumber" placeholder="Your phone number here">
         
       </div>
       <div class="mb-3">
-        <label class="form-label">Email Id</label>
+        <label class="form-label text-primary">Email Id</label>
         <input type="text" class="form-control" formControlName="emailId" placeholder="Your EmailID here">
        
       </div>
-      
-    <button type="submit" class="btn btn-warning">Submit</button>
-  </form>
+      <div class="addbtn">
+    <button type="submit" class="btn btn-primary">Submit</button></div>
+  </form></mat-card-content>
+  </mat-card>
+  </div>
 
 

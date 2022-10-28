@@ -1,7 +1,6 @@
 @import url(//fonts.googleapis.com/css?family=Lato:300:400);
 
 
-
 label{
   text-align:left ;
   padding: 0%;
@@ -10,11 +9,14 @@ label{
 
 .header {
   width: 100%;
-  padding-left: 0%;
+ 
   margin: 0%;
-  text-align:right;
+  text-align:relative;
   background: linear-gradient(60deg, rgba(84,58,183,1) 0%, rgba(0,172,193,1) 100%);
   color:white;
+  
+ 
+
 }
 .logo {
   width:50px;
@@ -25,18 +27,13 @@ label{
 }
 
 .inner-header {
-  height:65vh;
+
   width:100%;
   margin: 0;
   padding: 0;
 }
 
-.flex { /*Flexbox for containers*/
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-}
+
 
 .waves {
   position:relative;

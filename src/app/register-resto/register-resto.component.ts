@@ -20,9 +20,15 @@ export class RegisterRestoComponent implements OnInit {
   constructor(private resta:CommonService) { }
   creatresto(){
     this.resta.creatHotelDate(this.creatRestorant.value).subscribe((result)=>{
+     
+      this.alert=true;
+      this.creatRestorant.reset({});
       console.log(result,"added");
 
     })
+  }
+  closeAlert(){
+    this.alert=false;
   }
   ngOnInit(): void {
   }

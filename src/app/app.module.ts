@@ -11,6 +11,9 @@ import { RegisterRestoComponent } from './register-resto/register-resto.componen
 import { HttpClientModule } from '@angular/common/http';
 import { ReactiveFormsModule } from '@angular/forms';
 import { HomeComponent } from './home/home.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {MatCardModule} from '@angular/material/card';
+
 
 @NgModule({
   declarations: [
@@ -22,12 +25,17 @@ import { HomeComponent } from './home/home.component';
     RegisterRestoComponent,
     HomeComponent
   
+  
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    BrowserAnimationsModule,
+    MatCardModule
+    
+   
   ],
   providers: [],
   bootstrap: [AppComponent]
